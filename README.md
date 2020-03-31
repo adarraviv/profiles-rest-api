@@ -27,6 +27,9 @@ python manage.py createsuperuser
 View app...
 -python manage.py runserver 0.0.0.0:8000(view on localhost:8000 or 127.0.0.1:8000)
 
+Migrate New Profile...
+-python manage.py makemigrations
+-python manage.py migrate
 
 Django REST framework Views
 
@@ -68,3 +71,21 @@ ViewSet-uses model operations for functions(List,Create, Retrieve, Update, Parti
       -view specific profile details by using HTTP GET
       -update object using HTTP PUT/PATCH
       -remove it completely using HTTP DELETE
+
+Plan Profile feed API
+  -Update feed items- Logged in user only
+  -Delete feed items- Logged in user only
+  -Viewing other profile status updates - All users
+
+  API URLs
+
+  /api/feed/
+      -list all feed items
+      -GET (list feed items)
+      -POST (create feed item for logged in user)
+
+  /api/feed/<feed_item_id>/
+      -manage specific feed items
+      -GET(get the feed item)
+      -PUT / PATCH (update feed item)
+      -DELETE (delete feed item)
