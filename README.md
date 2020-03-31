@@ -25,7 +25,7 @@ python manage.py createsuperuser
 
 
 View app...
--python manage.py runserver 0.0.0.0:8000(view on localhost:8000)
+-python manage.py runserver 0.0.0.0:8000(view on localhost:8000 or 127.0.0.1:8000)
 
 
 Django REST framework Views
@@ -48,4 +48,23 @@ ViewSet-uses model operations for functions(List,Create, Retrieve, Update, Parti
   -A quick and simple API
   -Little to no customation on the logic
   -Working with standard data structures
-  
+
+
+  Profiles APIs
+
+  1. Create new profiles
+  2. Listing existing profiles
+  3.View specific profiles
+  4. Update profile of logged in user
+  5. Delete profile
+
+  API URLs
+
+  /api/profile/
+      -list all profiles when HTTP GET method is called
+      -create new profile when HTTP POST method is called
+
+  /api/profile/<profile_id>/
+      -view specific profile details by using HTTP GET
+      -update object using HTTP PUT/PATCH
+      -remove it completely using HTTP DELETE
