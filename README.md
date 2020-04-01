@@ -2,6 +2,15 @@
 
 Profiles REST API course code.
 
+In this application you can...
+-Create, update, delete & manage user profiles
+- Authenticate with username & password
+-Manage user profile feed items
+
+-Create a working local development server
+-User Django models to create a database
+-Enable and use Django Admin
+
 Run and connect to server...in the terminal type...
 
 -vagrant up
